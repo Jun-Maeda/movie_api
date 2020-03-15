@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>{{ title }}</h1>
+<div>
+  <h2>{{ movie["title"] }}</h2>
+  <h3>{{ movie["tagline"] }}</h3>
+  <div>
+    <img data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{movie['poster_path']}}" data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{movie['poster_path']}} 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/{{movie['poster_path']}} 2x" alt="{{movie['title']}}" srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{movie['poster_path']}} 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/{{movie['poster_path']}} 2x" src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{movie['poster_path']}}" class="shosai_img">
+    </div>
+    <div class="over">
+      {{ movie["overview"] }}
+      </div>
+
+    <div>
+
+      </div>
+  </div>
+</div>
+{% endblock %}

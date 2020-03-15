@@ -1,0 +1,12 @@
+p {
+  font-weight: bold;
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: auto;
+}
+
+.card_img {
+  object-fit: contain;
+}

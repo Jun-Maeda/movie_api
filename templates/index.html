@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>{{ message }}</h1>
+<div class="row">
+  {% for i in pops: %}
+  <div class="card col-md-6">
+    <!-- <img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{i['poster_path']}}" class="card-img-top" alt="{{i['title']}}"> -->
+    <img data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{i['poster_path']}}" data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{i['poster_path']}} 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/{{i['poster_path']}} 2x" alt="{{i['title']}}" srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{i['poster_path']}} 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/{{i['poster_path']}} 2x" src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{i['poster_path']}}" class="card_img">
+    <div class="card-body">
+      <p class="card-title">{{i['title']}}</p>
+      <p class="card-text">{{i['release_date']}}</p>
+      <a href="/movie?id={{i['id']}}" class="btn btn-primary">詳細</a>
+    </div>
+      </div>
+    {% endfor %}
+
+</div>
+{% endblock %}
